@@ -9,6 +9,7 @@ import { JogoService } from '../../services/jogo.service';
   templateUrl: './cadastrar-jogo.html',
 })
 export class CadastrarJogo {
+  categorias: string[] = ['Souls Like', 'FPS', 'RPG', 'Ação', 'Aventura'];
   nome: string = '';
   descricao: string = '';
   categoria: string = '';

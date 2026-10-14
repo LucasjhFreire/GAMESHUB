@@ -8,7 +8,15 @@
     }
   </p>
   <p>Descrição: <input type="text" name="descricao" [(ngModel)]="descricao" /></p>
-  <p>Categoria: <input type="text" name="categoria" [(ngModel)]="categoria" /></p>
+  <p>
+    Categoria:
+    <select name="categoria" [(ngModel)]="categoria">
+      <option value="">Selecione...</option>
+      @for (c of categorias; track c) {
+        <option [value]="c">{{ c }}</option>
+      }
+    </select>
+  </p>
   <p>
     Preço: <input type="number" name="preco" [(ngModel)]="preco" />
     @if (erroPreco != '') {
@@ -19,5 +27,6 @@
 </form>
 
 @if (sucesso != '') {
-  <p style="color: green">{{ sucesso }}</p>
+  <p style="color: lightgreen">{{ sucesso }}</p>
 }
+
