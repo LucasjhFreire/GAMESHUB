@@ -1,59 +1,26 @@
-# GAMESHUB
+# GameHub 🎮
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.1.5.
+Plataforma web desenvolvida em Angular para gerenciamento e catálogo de jogos eletrónicos, implementada sem backend e com dados centralizados em memória através de Services.
 
-## Development server
+## 🚀 Funcionalidades
+- **Página Inicial (`/`):** Apresenta o nome da plataforma, resumo, destaques e indicadores dinâmicos do total de jogos e jogos gratuitos.
+- **Catálogo de Jogos (`/jogos`):** Listagem completa utilizando `@for`, com barra de busca por nome, filtro por categoria e mensagens condicionais com `@if` caso não haja resultados.
+- **Detalhes do Jogo (`/jogos/:id`):** Consulta individual de jogos utilizando parâmetros de rota (`ActivatedRoute`) e tratamento de erro ("Jogo não encontrado").
+- **Cadastro de Jogos (`/cadastrar`):** Formulário interativo com `[(ngModel)]` e validações (nome obrigatório, preço não negativo e avaliação de 0 a 5) que adiciona novos registos via Service sem recarregar a página.
+- **Sobre o Projeto (`/sobre`):** Descrição detalhada do sistema, identificação do aluno, disciplina e tecnologias utilizadas.
 
-To start a local development server, run:
+## 🛠️ Tecnologias Utilizadas
+- **Angular** (Standalone Components)
+- **TypeScript**
+- **HTML5 & CSS3**
+- **Angular Router**
 
-```bash
-ng serve
-```
+## ⚙️ Instruções de Execução
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Certifica-te de ter o **Node.js** e o **Angular CLI** instalados no teu computador.
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+1. Clona este repositório ou descarrega os ficheiros (lembrando que a pasta `node_modules` não é incluída no repositório).
+2. Abre o terminal na pasta raiz do projeto (`GAMESHUB`).
+3. Instala as dependências executando o comando:
+   ```bash
+   npm install
