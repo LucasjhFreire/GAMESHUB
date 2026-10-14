@@ -1,0 +1,12 @@
+@if (jogo) {
+  <h2>{{ jogo.nome }}</h2>
+  <p>{{ jogo.descricao }}</p>
+  <p>Categoria: {{ jogo.categoria }}</p>
+  <p>Preço: {{ jogo.preco == 0 ? 'Gratuito' : 'R$ ' + jogo.preco }}</p>
+  <p>Avaliação: {{ jogo.avaliacao }}</p>
+  <p>Disponível: {{ jogo.disponivel ? 'Sim' : 'Não' }}</p>
+} @else {
+  <h2>Jogo não encontrado</h2>
+}
+
+<a routerLink="/jogos">Voltar para o catálogo</a>

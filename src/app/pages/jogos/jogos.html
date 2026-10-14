@@ -1,0 +1,24 @@
+<h2>Catálogo de Jogos</h2>
+
+<input type="text" placeholder="Buscar por nome" [(ngModel)]="busca" (input)="filtrar()" />
+
+<select [(ngModel)]="categoria" (change)="filtrar()">
+  <option value="">Todas as categorias</option>
+  @for (c of categorias; track c) {
+    <option [value]="c">{{ c }}</option>
+  }
+</select>
+
+@if (erro != '') {
+  <p style="color: red">{{ erro }}</p>
+}
+
+@for (jogo of jogos; track jogo.id) {
+  <div>
+    <h3>{{ jogo.nome }}</h3>
+    <p>Categoria: {{ jogo.categoria }}</p>
+    <p>Preço: {{ jogo.preco == 0 ? 'Gratuito' : 'R$ ' + jogo.preco }}</p>
+    <p>Avaliação: {{ jogo.avaliacao }}</p>
+    <a [routerLink]="['/jogos', jogo.id]">Ver detalhes</a>
+  </div>
+}

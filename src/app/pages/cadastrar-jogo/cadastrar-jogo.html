@@ -1,0 +1,23 @@
+<h2>Cadastrar Jogo</h2>
+
+<form (ngSubmit)="cadastrar()">
+  <p>
+    Nome: <input type="text" name="nome" [(ngModel)]="nome" />
+    @if (erroNome != '') {
+      <span style="color: red">{{ erroNome }}</span>
+    }
+  </p>
+  <p>Descrição: <input type="text" name="descricao" [(ngModel)]="descricao" /></p>
+  <p>Categoria: <input type="text" name="categoria" [(ngModel)]="categoria" /></p>
+  <p>
+    Preço: <input type="number" name="preco" [(ngModel)]="preco" />
+    @if (erroPreco != '') {
+      <span style="color: red">{{ erroPreco }}</span>
+    }
+  </p>
+  <button type="submit">Cadastrar</button>
+</form>
+
+@if (sucesso != '') {
+  <p style="color: green">{{ sucesso }}</p>
+}
